@@ -12,7 +12,7 @@ jobs:
   build:
 
     env:
-      BUILD_CONFIG: 'Release'
+      BUILD_CONFIG: 'Release|Any CPU'
       SOLUTION: 'ManagedNativeWifi.sln'
 
     runs-on: windows-latest
