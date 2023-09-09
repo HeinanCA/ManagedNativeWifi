@@ -13,9 +13,12 @@ jobs:
 
     env:
       BUILD_CONFIG: 'Release'
-      SOLUTION: 'Source\ManagedNativeWifi.sln'
+      SOLUTION: 'ManagedNativeWifi.sln'
 
     runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: ./Source
 
     steps:
     - uses: actions/checkout@v2
