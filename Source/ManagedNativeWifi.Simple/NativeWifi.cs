@@ -156,7 +156,7 @@ namespace ManagedNativeWifi.Simple
 			public override string ToString()
 			{
 				if (ucSSID is null)
-					return null;
+					return "";
 
 				try
 				{
@@ -164,7 +164,7 @@ namespace ManagedNativeWifi.Simple
 				}
 				catch (DecoderFallbackException)
 				{
-					return null;
+					return "";
 				}
 			}
 		}
@@ -181,7 +181,7 @@ namespace ManagedNativeWifi.Simple
 			{
 				return (ucDot11MacAddress is not null)
 					? BitConverter.ToString(ucDot11MacAddress).Replace('-', ':')
-					: null;
+					: "";
 			}
 		}
 

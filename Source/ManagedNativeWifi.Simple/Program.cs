@@ -11,14 +11,7 @@ namespace ManagedNativeWifi.Simple
 	{
 		static void Main(string[] args)
 		{
-			if (!Debugger.IsAttached)
-				Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
-
-			Debug.WriteLine("[Available Network SSIDs]");
-			NativeWifi.GetAvailableNetworkSsids().ToArray();
-
-			Debug.WriteLine("[Connected Network SSIDs]");
-			NativeWifi.GetConnectedNetworkSsids().ToArray();
+			//Cleaned up - as we aim for library and not for debugging utility
 		}
 	}
 }
