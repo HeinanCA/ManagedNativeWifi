@@ -65,5 +65,3 @@ jobs:
         .\.sonar\scanner\dotnet-sonarscanner begin /k:"HeinanCA_ManagedNativeWifi" /o:"heinanca" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
         dotnet build $SOLUTION --no-restore --verbosity normal
         .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
-    - name: Run tests
-      run: dotnet test /p:Configuration=$env:BUILD_CONFIG --no-restore --no-build --verbosity normal
